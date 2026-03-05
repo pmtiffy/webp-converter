@@ -1,57 +1,43 @@
-# WebP Batch Converter
+# WebP Converter
 
 [English](#english) | [繁體中文](#繁體中文)
 
 <h2 id="english">English</h2>
 
-A browser-based tool for converting JPG and PNG images to WebP format. The conversion runs entirely on the client side, meaning files are processed locally and never uploaded to any external server.
+A browser-based tool to batch convert JPG and PNG images to WebP. It runs entirely on the client side, ensuring privacy and fast processing without any server uploads.
 
 ### Features
-
-* **Client-side processing:** Uses HTML5 Canvas for image conversion.
-* **Bulk import:** Supports dragging and dropping multiple files or selecting entire directories.
-* **Direct output:** Saves converted files directly to a local folder via the File System Access API.
-* **ZIP export fallback:** Bundles all images into a single ZIP file for browsers that do not support direct folder writing.
-* **Theme toggle:** Includes dark and light modes with local storage persistence.
+* Local conversion using HTML5 Canvas and WebAssembly.
+* Drag and drop support for files and folders.
+* Direct folder output (via File System Access API) or ZIP download.
+* Built-in i18n (English, Traditional Chinese, Japanese, Korean).
+* Dark and light theme toggle.
 
 ### Tech Stack
-
-* HTML5
-* CSS3
 * Vanilla JavaScript
+* HTML5 / CSS3
 * [JSZip](https://stuk.github.io/jszip/)
+* [@jsquash/webp](https://github.com/jamsinclair/jSquash)
 
 ### Usage
-
-1. Open `index.html` in Chrome or Edge.
-2. Drag images or folders into the drop zone.
-3. Set the desired WebP quality.
-4. Choose to save directly to a folder or download as a ZIP file.
-
-<br>
+Simply open `index.html` in a modern browser like Chrome or Edge. Drag your images into the dropzone, adjust the quality slider, and choose your export method.
 
 <h2 id="繁體中文">繁體中文</h2>
 
-這是一個純前端的 JPG 與 PNG 轉 WebP 工具。所有轉換程序都在使用者的瀏覽器本地執行，無須後端伺服器，圖片檔案不會外流。
+這是一個純前端的圖片轉檔工具，用於將 JPG 和 PNG 批量轉換為 WebP 格式。所有處理都在瀏覽器本地完成，不依賴後端，無須擔心圖片外流。
 
-### 特點
+### 功能特點
+* 使用 HTML5 Canvas 與 WebAssembly 進行本地轉檔。
+* 支援直接拖曳多個檔案或整個資料夾。
+* 支援直接寫入本機資料夾 (需瀏覽器支援 File System Access API)，或打包成 ZIP 下載。
+* 內建繁體中文、英文、日文與韓文，支援自動偵測切換。
+* 支援深色與淺色主題。
 
-* **本地端處理：** 利用 HTML5 Canvas 轉換圖片格式。
-* **批量匯入：** 支援拖曳多個檔案或完整資料夾。
-* **直接輸出：** 透過 File System Access API 直接將檔案存入本地指定資料夾。
-* **ZIP 打包：** 若瀏覽器不支援直接寫入，可將所有圖片打包成單一 ZIP 檔下載。
-* **主題切換：** 內建深色與淺色主題，並自動記錄使用者偏好。
-
-### 技術摘要
-
-* HTML5
-* CSS3
+### 開發技術
 * 原生 JavaScript
+* HTML5 / CSS3
 * [JSZip](https://stuk.github.io/jszip/)
+* [@jsquash/webp](https://github.com/jamsinclair/jSquash)
 
-### 使用方法
-
-1. 使用 Chrome 或 Edge 開啟 `index.html`。
-2. 將圖片或資料夾拖曳至畫面中的轉換區。
-3. 調整 WebP 壓縮品質參數。
-4. 點擊儲存至資料夾或下載 ZIP 檔完成匯出。
+### 使用方式
+使用 Chrome 或 Edge 直接開啟 `index.html` 即可運行。將圖片拖曳至網頁中，調整品質滑桿後，選擇要直接存入資料夾或下載 ZIP 檔。
